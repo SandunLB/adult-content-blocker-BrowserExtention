@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Basic Adult Content Blocker",
+    "version": "1.0",
+    "description": "Blocks specific URLs for adult content.",
+    "permissions": ["webRequest", "webRequestBlocking", "storage", "tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "48": "assets/icon.png",
+      "128": "assets/icon128.png"
+    }
+  }
+  
