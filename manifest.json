@@ -1,18 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Basic Adult Content Blocker",
-    "version": "1.0",
-    "description": "Blocks specific URLs for adult content.",
-    "permissions": ["webRequest", "webRequestBlocking", "storage", "tabs"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "icons": {
-      "48": "assets/icon.png",
-      "128": "assets/icon128.png"
-    }
+  "manifest_version": 3,
+  "name": "Basic Adult Content Blocker",
+  "version": "1.0",
+  "description": "Blocks specific URLs for adult content.",
+  "permissions": ["declarativeNetRequest", "declarativeNetRequestWithHostAccess", "storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "assets/icon.png",
+    "128": "assets/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "blocklist",
+      "enabled": true,
+      "path": "rules.json"
+    }]
   }
-  
+}

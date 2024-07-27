@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {
+        "urlFilter": "*://*.exampleadultsite.com/*",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {
+        "urlFilter": "*://*.anotherexample.com/*",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    }
+  ]
+  
