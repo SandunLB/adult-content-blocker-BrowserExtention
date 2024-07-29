@@ -1,9 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Basic Adult Content Blocker",
+  "name": "Advanced Content Blocker",
   "version": "1.0",
-  "description": "Blocks specific URLs for adult content.",
-  "permissions": ["declarativeNetRequest", "declarativeNetRequestWithHostAccess", "storage", "tabs"],
+  "description": "Blocks specific URLs for adult content and redirects to a warning page.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "tabs"
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -13,12 +18,5 @@
   "icons": {
     "48": "assets/icon.png",
     "128": "assets/icon128.png"
-  },
-  "declarative_net_request": {
-    "rule_resources": [{
-      "id": "blocklist",
-      "enabled": true,
-      "path": "rules.json"
-    }]
   }
 }
